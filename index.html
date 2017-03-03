@@ -102,6 +102,12 @@
 					$('#mySidenav').css('width', nav_state_open ? '250px' : '0px');
 				});
 
+				$('#art-link').on('click', function () {
+					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
+					// window.location.replace(host + '/contact-me.html');
+					window.location.href = host + '/pages/art.html';
+				});
+
 				$('#contact-me-link').on('click', function () {
 					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
 					// window.location.replace(host + '/contact-me.html');
