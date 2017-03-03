@@ -60,57 +60,46 @@
 	</head>
 
 	<body bgcolor='#000000' style='margin: 0px'>
-		<img id='background' src='http://farm1.staticflickr.com/738/33201077555_6fbd824286_b.jpg' alt='Desmond Vehar' style='margin: auto'>
-
 		<div id='main-container'>
-			<input id='menu' type='image' src='./assets/cheveron_open.png' alt='Menu' width='48' height='48'>
+			<input id='menu' type='image' src='../assets/cheveron_open.png' alt='Menu' width='48' height='48'>
 
 			<div id='mySidenav' class='sidenav'>
+				<a id='home-link'>Home</a>
 				<a id='about-me-link'>About Me</a>
 				<a id='side-projects-link'>Side Projects</a>
 				<a id='art-link'>Art</a>
-				<a id='contact-me-link'>Contact Me</a>
 			</div>
+
+			<div style="text-align:center; background-color: lightblue">
+				<h1>Desmond Vehar</h1>
+				Email: "&lt;first_name&gt;&lt;last_name&gt;"@gmail.com<br>
+				<a href="https://dl.dropboxusercontent.com/u/55589692/Desmond_Vehar_Resume.pdf">Resume</a>&nbsp;
+				<a href="http://www.linkedin.com/pub/desmond-vehar/50/821/941" target="_blank"><img src="http://www.coachville.com/wp-content/uploads/2012/02/linkedin-icon-gif.gif" width="19" height="19" alt="linkedin" border="0" title="linkedin"></a>&nbsp;
+				<a href="https://github.com/dvehar" target="_blank"><img src="http://desmondvehar.altervista.org/files/GitHub_Logo.png" width="40" height="19" alt="github" border="0" title="github"></a>&nbsp;
+	            <a href="https://www.hackerrank.com/dvehar" target="_blank"><img src="http://desmondvehar.altervista.org/files/HakerRank_Logo.png" width="25" height="19" alt="hakerrank" border="0" title="hakerrank"></a>&nbsp;
+	            <a href="http://desmondvehar.altervista.org/files/Desmond_Vehar_Unofficial_Transcript.pdf">Transcripts</a>
+	            <br>
+			</div>	
 		</div>
-		
 
 		<script>
 			$(document).ready(function () {
 				// Nav State
 				var nav_state_open = false;
 
-				// Set the background image from grayscale 40% to grayscale 85%
-				function loadingAnimation () {
-					var id = null;
-					var grayscale = 40;
-					id = setInterval(function () {
-						$('img').css('filter', 'grayscale(' + grayscale + '%)');
-						grayscale += 2;
-						if (grayscale >= 85) {
-							clearInterval(id);
-							// Open the menu if it is not already open
-							if (!nav_state_open) {
-								$('#menu').click();	
-							}
-						}
-					}, 100);
-				}
-
 				$('#menu').on('click', function () {
 					nav_state_open = !nav_state_open;
-					$('#menu').attr('src', nav_state_open ? './assets/cheveron_close.png' : './assets/cheveron_open.png')
+					$('#menu').attr('src', nav_state_open ? '../assets/cheveron_close.png' : '../assets/cheveron_open.png')
 					$('#mySidenav').css('width', nav_state_open ? '250px' : '0px');
 				});
 
-				$('#contact-me-link').on('click', function () {
+				$('#home-link').on('click', function () {
 					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
-					// window.location.replace(host + '/contact-me.html');
-					window.location.href = host + '/pages/contact-me.html';
+					window.location.href = host + '/index.html';
 				});
-
-				loadingAnimation();
 			});
 		</script>
 	</body>
 
 </html>
+
