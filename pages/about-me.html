@@ -29,9 +29,9 @@
 			.sidenav {
 			    height: 100%; /* 100% Full-height */
 			    width: 0; /* 0 width - change this with JavaScript */
-			    /*position: fixed;  Stay in place */
+			    position: fixed; 
 			    z-index: 1; /* Stay on top */
-			    top: 0;
+			    top: 48;
 			    left: 0;
 			    /*background-color: #000;  Black*/
 			    overflow-x: hidden; /* Disable horizontal scroll */
@@ -53,6 +53,14 @@
 			.sidenav a:hover, .offcanvas a:focus{
 			    color: #eb9100;
 			}
+
+			p.question {
+				margin: 0px 0px 0px 0px
+			}
+
+			p.awnser {
+				margin: 0px 0px 10px 0px
+			}
 		</style>
 
 		<!-- Load jQuery -->
@@ -65,16 +73,36 @@
 
 			<div id='mySidenav' class='sidenav'>
 				<a id='home-link'>Home</a>
-				<a id='about-me-link'>About Me</a>
 				<a id='side-projects-link'>Side Projects</a>
+				<a id='art-link'>Art</a>
 				<a id='contact-me-link'>Contact Me</a>
 			</div>
 
-			<div style="text-align:center; background-color: lightblue">
+			<div style="top: 0;text-align:center; background-color: lightblue">
 				<br/>
-				<a href="https://drive.google.com/folderview?id=0B1y7QzFUu3NnSDc1Vk8wYzE4VUk&usp=sharing">
-					<h1 style='font-style: italic;'>Art</h1>
-				</a>
+				<p>My favorite quote is "Iron Sharpens Iron"</p>
+				<br/>
+				<p><u>Inside The Actors Studio</u></p>
+				<p class='question'>1. What is your favorite word?</p>
+				<p class='awnser'>Jazz</p>
+				<p class='question'>2. What is your least favorite word?</p>
+				<p class='awnser'>Maggot</p>
+				<p class='question'>3. What turns you on?</p>
+				<p class='awnser'>Humor</p>
+				<p class='question'>4. What turns you off?</p>
+				<p class='awnser'>Negitivity</p>
+				<p class='question'>5. What sound or noise do you love?</p>
+				<p class='awnser'>Thunder</p>
+				<p class='question'>6. What sound or noise do you hate?</p>
+				<p class='awnser'>Wispering right into my ear</p>
+				<p class='question'>7. What is your favorite curse word?</p>
+				<p class='awnser'>****</p>
+				<p class='question'>8. What profession other than your own would you like to attempt?</p>
+				<p class='awnser'>Teacher</p>
+				<p class='question'>9. What profession would you not like to do?</p>
+				<p class='awnser'>Telephone Support Worker</p>
+				<p class='question'>10. If heaven exists, what would you like to hear God say when you arrive at the pearly gates?</p>
+				<p class='awnser'>Nothing just to see a warm smile</p>
 				<br/>
 			</div>	
 		</div>
@@ -95,15 +123,15 @@
 					window.location.href = host + '/index.html';
 				});
 
-				$('#about-me-link').on('click', function () {
-					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
-					window.location.href = host + '/pages/about-me.html';
-				});
-
 				$('#side-projects-link').on('click', function () {
 					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
 					// window.location.replace(host + '/contact-me.html');
 					window.location.href = host + '/pages/side-projects.html';
+				});
+
+				$('#art-link').on('click', function () {
+					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
+					window.location.href = host + '/pages/art.html';
 				});
 
 				$('#contact-me-link').on('click', function () {
