@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Desmond Vehar</title>
+
+		<style>
+			img#background {
+				position: fixed;
+				left: 0;
+				right: 0;
+				height: 100%;
+				height: 100%;
+				-webkit-filter: grayscale(1);
+				filter: grayscale(40%);
+				z-index: 1; /* stay in the background */
+			}
+
+			div#main-container {
+				position: fixed;
+				left: 0;
+				right: 0;
+				z-index: 1000; /* stay in the foreground */
+			}
+
+			/* 
+			 * The side navigation menu
+			 */
+			.sidenav {
+			    height: 100%; /* 100% Full-height */
+			    width: 0; /* 0 width - change this with JavaScript */
+			    position: fixed; 
+			    z-index: 1; /* Stay on top */
+			    top: 48;
+			    left: 0;
+			    /*background-color: #000;  Black*/
+			    overflow-x: hidden; /* Disable horizontal scroll */
+			    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+			}
+
+			/* The navigation menu links */
+			.sidenav a {
+			    padding: 8px 8px 8px 8px;
+			    text-decoration: none;
+			    font-size: 25px;
+			    color: #FFF;
+			    display: block;
+			    transition: 0.3s;
+			    width: 500px; /* Avoid text wrapping */
+			}
+
+			/* When you mouse over the navigation links, change their color */
+			.sidenav a:hover, .offcanvas a:focus{
+			    color: #eb9100;
+			}
+
+			p.question {
+				margin: 0px 0px 0px 0px
+			}
+
+			p.awnser {
+				margin: 0px 0px 10px 0px
+			}
+		</style>
+
+		<!-- Load jQuery -->
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	</head>
+
+	<body bgcolor='#000000' style='margin: 0px'>
+		<div id='main-container'>
+			<input id='menu' type='image' src='../assets/cheveron_open.png' alt='Menu' width='48' height='48'>
+
+			<div id='mySidenav' class='sidenav'>
+				<a id='home-link'>Home</a>
+				<a id='side-projects-link'>Side Projects</a>
+				<a id='art-link'>Art</a>
+				<a id='contact-me-link'>Contact Me</a>
+			</div>
+
+			<div style="top: 0;text-align:center; background-color: lightblue">
+				<br/>
+				<p>My favorite quote is "Iron Sharpens Iron"</p>
+				<br/>
+				<p><u>Inside The Actors Studio</u></p>
+				<p class='question'>1. What is your favorite word?</p>
+				<p class='awnser'>Jazz</p>
+				<p class='question'>2. What is your least favorite word?</p>
+				<p class='awnser'>Maggot</p>
+				<p class='question'>3. What turns you on?</p>
+				<p class='awnser'>Humor</p>
+				<p class='question'>4. What turns you off?</p>
+				<p class='awnser'>Negitivity</p>
+				<p class='question'>5. What sound or noise do you love?</p>
+				<p class='awnser'>Thunder</p>
+				<p class='question'>6. What sound or noise do you hate?</p>
+				<p class='awnser'>Wispering right into my ear</p>
+				<p class='question'>7. What is your favorite curse word?</p>
+				<p class='awnser'>****</p>
+				<p class='question'>8. What profession other than your own would you like to attempt?</p>
+				<p class='awnser'>Teacher</p>
+				<p class='question'>9. What profession would you not like to do?</p>
+				<p class='awnser'>Telephone Support Worker</p>
+				<p class='question'>10. If heaven exists, what would you like to hear God say when you arrive at the pearly gates?</p>
+				<p class='awnser'>Nothing just to see a warm smile</p>
+				<br/>
+			</div>	
+		</div>
+
+		<script>
+			$(document).ready(function () {
+				// Nav State
+				var nav_state_open = false;
+
+				$('#menu').on('click', function () {
+					nav_state_open = !nav_state_open;
+					$('#menu').attr('src', nav_state_open ? '../assets/cheveron_close.png' : '../assets/cheveron_open.png')
+					$('#mySidenav').css('width', nav_state_open ? '250px' : '0px');
+				});
+
+				$('#home-link').on('click', function () {
+					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
+					window.location.href = host + '/index.html';
+				});
+
+				$('#side-projects-link').on('click', function () {
+					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
+					// window.location.replace(host + '/contact-me.html');
+					window.location.href = host + '/pages/side-projects.html';
+				});
+
+				$('#art-link').on('click', function () {
+					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
+					window.location.href = host + '/pages/art.html';
+				});
+
+				$('#contact-me-link').on('click', function () {
+					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
+					// window.location.replace(host + '/contact-me.html');
+					window.location.href = host + '/pages/contact-me.html';
+				});
+			});
+		</script>
+	</body>
+
+</html>
+

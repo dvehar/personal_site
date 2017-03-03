@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Desmond Vehar</title>
+
+		<style>
+			img#background {
+				position: fixed;
+				left: 0;
+				right: 0;
+				height: 100%;
+				height: 100%;
+				-webkit-filter: grayscale(1);
+				filter: grayscale(40%);
+				z-index: 1; /* stay in the background */
+			}
+
+			div#main-container {
+				position: fixed;
+				left: 0;
+				right: 0;
+				z-index: 1000; /* stay in the foreground */
+			}
+
+			/* 
+			 * The side navigation menu
+			 */
+			.sidenav {
+			    height: 100%; /* 100% Full-height */
+			    width: 0; /* 0 width - change this with JavaScript */
+			    /*position: fixed;  Stay in place */
+			    z-index: 1; /* Stay on top */
+			    top: 0;
+			    left: 0;
+			    /*background-color: #000;  Black*/
+			    overflow-x: hidden; /* Disable horizontal scroll */
+			    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+			}
+
+			/* The navigation menu links */
+			.sidenav a {
+			    padding: 8px 8px 8px 8px;
+			    text-decoration: none;
+			    font-size: 25px;
+			    color: #FFF;
+			    display: block;
+			    transition: 0.3s;
+			    width: 500px; /* Avoid text wrapping */
+			}
+
+			/* When you mouse over the navigation links, change their color */
+			.sidenav a:hover, .offcanvas a:focus{
+			    color: #eb9100;
+			}
+		</style>
+
+		<!-- Load jQuery -->
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	</head>
+
+	<body bgcolor='#000000' style='margin: 0px'>
+		<div id='main-container'>
+			<input id='menu' type='image' src='../assets/cheveron_open.png' alt='Menu' width='48' height='48'>
+
+			<div id='mySidenav' class='sidenav'>
+				<a id='home-link'>Home</a>
+				<a id='about-me-link'>About Me</a>
+				<a id='side-projects-link'>Side Projects</a>
+				<a id='contact-me-link'>Contact Me</a>
+			</div>
+
+			<div style="text-align:center; background-color: lightblue">
+				<br/>
+				<a href="https://drive.google.com/folderview?id=0B1y7QzFUu3NnSDc1Vk8wYzE4VUk&usp=sharing">
+					<h1 style='font-style: italic;'>Art</h1>
+				</a>
+				<br/>
+			</div>	
+		</div>
+
+		<script>
+			$(document).ready(function () {
+				// Nav State
+				var nav_state_open = false;
+
+				$('#menu').on('click', function () {
+					nav_state_open = !nav_state_open;
+					$('#menu').attr('src', nav_state_open ? '../assets/cheveron_close.png' : '../assets/cheveron_open.png')
+					$('#mySidenav').css('width', nav_state_open ? '250px' : '0px');
+				});
+
+				$('#home-link').on('click', function () {
+					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
+					window.location.href = host + '/index.html';
+				});
+
+				$('#about-me-link').on('click', function () {
+					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
+					window.location.href = host + '/pages/about-me.html';
+				});
+
+				$('#side-projects-link').on('click', function () {
+					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
+					// window.location.replace(host + '/contact-me.html');
+					window.location.href = host + '/pages/side-projects.html';
+				});
+
+				$('#contact-me-link').on('click', function () {
+					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
+					// window.location.replace(host + '/contact-me.html');
+					window.location.href = host + '/pages/contact-me.html';
+				});
+			});
+		</script>
+	</body>
+
+</html>
+
