@@ -91,7 +91,7 @@
 					</li>
 					<li>
 						<div>
-							<a href="http://desmondvehar.altervista.org/files/snake_js">
+							<a href="../files/snake_js">
 								<h2>Skittles</h2>
 							</a>
 							<p>A Snake Variant</p>
@@ -114,23 +114,22 @@
 				});
 
 				$('#home-link').on('click', function () {
-					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
+					var host = (location.origin !== 'file://') ? location.origin : 'file:///Users/desmondv/git2/personal_site';
 					window.location.href = host + '/index.html';
 				});
 
 				$('#about-me-link').on('click', function () {
-					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
+					var host = (location.origin !== 'file://') ? location.origin : 'file:///Users/desmondv/git2/personal_site';
 					window.location.href = host + '/pages/about-me.html';
 				});
 
 				$('#art-link').on('click', function () {
-					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
+					var host = (location.origin !== 'file://') ? location.origin : 'file:///Users/desmondv/git2/personal_site';
 					window.location.href = host + '/pages/art.html';
 				});
 
 				$('#contact-me-link').on('click', function () {
-					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
-					// window.location.replace(host + '/contact-me.html');
+					var host = (location.origin !== 'file://') ? location.origin : 'file:///Users/desmondv/git2/personal_site';
 					window.location.href = host + '/pages/contact-me.html';
 				});
 			});
