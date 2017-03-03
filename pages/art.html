@@ -91,24 +91,22 @@
 				});
 
 				$('#home-link').on('click', function () {
-					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
+					var host = (location.origin !== 'file://') ? location.origin : 'file:///Users/desmondv/git2/personal_site';
 					window.location.href = host + '/index.html';
 				});
 
 				$('#about-me-link').on('click', function () {
-					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
+					var host = (location.origin !== 'file://') ? location.origin : 'file:///Users/desmondv/git2/personal_site';
 					window.location.href = host + '/pages/about-me.html';
 				});
 
 				$('#side-projects-link').on('click', function () {
-					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
-					// window.location.replace(host + '/contact-me.html');
+					var host = (location.origin !== 'file://') ? location.origin : 'file:///Users/desmondv/git2/personal_site';
 					window.location.href = host + '/pages/side-projects.html';
 				});
 
 				$('#contact-me-link').on('click', function () {
-					var host = window.location.hostname || 'file:///Users/desmondv/git2/personal_site';
-					// window.location.replace(host + '/contact-me.html');
+					var host = (location.origin !== 'file://') ? location.origin : 'file:///Users/desmondv/git2/personal_site';
 					window.location.href = host + '/pages/contact-me.html';
 				});
 			});
