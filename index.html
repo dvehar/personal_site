@@ -63,7 +63,7 @@
 		<img id='background' src='http://farm1.staticflickr.com/738/33201077555_6fbd824286_b.jpg' alt='Desmond Vehar' style='margin: auto'>
 
 		<div id='main-container'>
-			<input id='menu' type='image' src='./assets/cheveron.png' alt='Menu' width='48' height='48'>
+			<input id='menu' type='image' src='./assets/cheveron_open.png' alt='Menu' width='48' height='48'>
 
 			<div id='mySidenav' class='sidenav'>
 				<a href='#'>About Me</a>
@@ -84,17 +84,21 @@
 					var id = null;
 					var grayscale = 40;
 					id = setInterval(function() {
-						// console.log(grayscale);
 						$('img').css('filter', 'grayscale(' + grayscale + '%)');
 						grayscale += 2;
 						if (grayscale >= 85) {
 							clearInterval(id);
+							// Open the menu if it is not already open
+							if (!nav_state_open) {
+								$('#menu').click();	
+							}
 						}
 					}, 100);
 				}
 
 				$('#menu').on('click', function() {
 					nav_state_open = !nav_state_open;
+					$('#menu').attr('src', nav_state_open ? './assets/cheveron_close.png' : './assets/cheveron_open.png')
 					$('#mySidenav').css('width', nav_state_open ? '250px' : '0px');
 				});
 
