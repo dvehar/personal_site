@@ -65,7 +65,6 @@
 
 			<div id='mySidenav' class='sidenav'>
 				<a id='home-link'>Home</a>
-				<a id='about-me-link'>About Me</a>
 				<a id='art-link'>Art</a>
 				<a id='contact-me-link'>Contact Me</a>
 			</div>
@@ -75,18 +74,34 @@
 				<ul style='list-style: none'>
 					<li>
 						<div>
-							<a href="https://snow-image.herokuapp.com/">
-								<h2>Snow Image</h2>
+							<a href="https://chrome.google.com/webstore/detail/amazon-price-per-unit/lnjehpmphflnknefeolneomoophmmije">
+								<h2>Amazon Price Per Unit - Chrome Extension (July 2017)</h2>
 							</a>
-							<p>View Your Favorite Pictures in a Colorful 'Snow'</p>
+							<p>This extension shows the price per unit (ounce, pound, etc.) for Amazon items where it is not already shown.</p>
 						</div>
 					</li>
 					<li>
 						<div>
-							<a href="https://github.com/dvehar/motivateme">
-								<h2>Motivate Me</h2>
+							<a href="https://github.com/dvehar/alexa-robinhood-skill">
+								<h2>Robinhood - Amazon Alexa Skill (June 2017)</h2>
 							</a>
-							<p>A Motivation Amazon Alexa Skill</p>
+							<p>For my 2nd Amazon Alexa skill side-project, I created an Alexa skill that leveraged the unofficial Robinhood API (https://github.com/sanko/Robinhood/) to allow users of Robinhood to get account updates such as their news and their account performance for the day. The skill also allows users to fetch quotes for any stock.</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="https://www.amazon.com/Desmond-Vehar-Motivate-Me/dp/B01NAKTIOS">
+								<h2>Motivate Me - Amazon Alexa Skill (December 2016)</h2>
+							</a>
+							<p>Motivate Me is a simple but elegant Amazon Alexia Skill that can play motivational quotes. This was my first Alexa project. I used Flickr as my source for images, and several online sources for quotes</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="https://snow-image.herokuapp.com/">
+								<h2>Snow Image</h2>
+							</a>
+							<p>View Your Favorite Pictures in a Colorful 'Snow'</p>
 						</div>
 					</li>
 					<li>
@@ -116,11 +131,6 @@
 				$('#home-link').on('click', function () {
 					var host = (location.origin !== 'file://') ? location.origin : 'file:///Users/desmondv/git2/personal_site';
 					window.location.href = host + '/index.html';
-				});
-
-				$('#about-me-link').on('click', function () {
-					var host = (location.origin !== 'file://') ? location.origin : 'file:///Users/desmondv/git2/personal_site';
-					window.location.href = host + '/pages/about-me.html';
 				});
 
 				$('#art-link').on('click', function () {
